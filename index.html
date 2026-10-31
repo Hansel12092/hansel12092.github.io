@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piano Lessons in Richmond, BC · Hansel</title>
+<meta name="description" content="Patient, fun piano lessons in Richmond, BC for kids 6+ and adults, in English, Cantonese or Mandarin. Book a free 30-minute trial lesson.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1F2A44; --navy-deep: #161F33; --ink: #1F2A44; --soft: #4A5468; --line: #D6DCE8;
+  --paper: #FFFFFF; --mist: #F2F4F8; --gold: #E3B04B; --gold-deep: #9A6B0F;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font: 17px/1.6 Outfit, "Noto Sans TC", system-ui, sans-serif; color: var(--ink); background: var(--paper); }
+a { color: var(--navy); }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+/* top */
+.top { background: var(--navy); color: #fff; }
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; padding-bottom: 18px; }
+.brand { font-weight: 700; font-size: 20px; color: #fff; text-decoration: none; }
+.bar nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.bar nav a { color: #D6DCE8; text-decoration: none; font-size: 15px; }
+.bar nav a:hover { color: #fff; }
+.hero { padding-top: 56px; padding-bottom: 96px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.eyebrow { color: var(--gold); font-weight: 600; font-size: 16px; margin: 0 0 10px; }
+.hero h1 { font-size: clamp(36px, 6vw, 58px); line-height: 1.05; margin: 0 0 18px; letter-spacing: -0.01em; }
+.hero p.lead { font-size: 19px; color: #D6DCE8; margin: 0 0 28px; max-width: 34ch; }
+.langs { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 30px; padding: 0; list-style: none; }
+.langs li { border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 14px; font-size: 15px; }
+.btn { display: inline-block; background: var(--gold); color: var(--navy-deep); font-weight: 700; font-size: 18px; text-decoration: none; padding: 14px 26px; border-radius: 10px; border: 0; cursor: pointer; font-family: inherit; }
+.btn:hover { background: #EDC067; }
+.hero .note { font-size: 15px; color: #AEB8CC; margin-top: 12px; }
+.price-tag { background: var(--paper); color: var(--ink); border-radius: 16px; padding: 28px; box-shadow: 0 20px 50px rgba(0,0,0,.25); }
+.price-tag h2 { margin: 0 0 4px; font-size: 22px; }
+.price-tag .free { font-size: 15px; color: var(--soft); margin: 0 0 18px; }
+.price-tag table { width: 100%; border-collapse: collapse; font-size: 17px; }
+.price-tag td { padding: 10px 0; border-top: 1px solid var(--line); }
+.price-tag td:last-child { text-align: right; font-weight: 700; }
+.price-tag .where { font-size: 15px; color: var(--soft); margin: 16px 0 0; }
+.keys { height: 64px; display: grid; grid-template-columns: repeat(21, minmax(0, 1fr)); gap: 3px; background: var(--navy); padding: 0 3px; position: relative; }
+.keys span { background: #fff; border-radius: 0 0 4px 4px; }
+.keys i { position: absolute; top: 0; width: calc(100% / 21 * .6); height: 38px; background: var(--navy-deep); border-radius: 0 0 3px 3px; }
+
+/* sections */
+section { padding: 72px 0; }
+section.alt { background: var(--mist); }
+h2.sec { font-size: clamp(28px, 4vw, 38px); line-height: 1.15; margin: 0 0 28px; }
+.who { display: grid; grid-template-columns: repeat(auto-fit, minmax(176px, 1fr)); gap: 16px; padding: 0; margin: 0; list-style: none; }
+.who li { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+.who b { display: block; font-size: 18px; margin-bottom: 4px; }
+.who span { color: var(--soft); font-size: 16px; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; counter-reset: s; padding: 0; margin: 0 0 20px; list-style: none; }
+.steps li { counter-increment: s; }
+.steps li::before { content: counter(s); display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--navy); color: #fff; font-weight: 700; margin-bottom: 12px; }
+.steps b { display: block; font-size: 19px; margin-bottom: 4px; }
+.steps span { color: var(--soft); }
+.about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+.about p { margin: 0 0 16px; max-width: 60ch; }
+.pull { font-size: 24px; line-height: 1.35; font-weight: 600; border-top: 4px solid var(--gold); padding-top: 18px; margin: 0; }
+
+/* form */
+form { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 20px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field.full { grid-column: 1 / -1; }
+label, legend { font-weight: 600; font-size: 15px; }
+.opt { font-weight: 400; color: var(--soft); }
+input[type=text], input[type=email], input[type=tel], select, textarea { font: inherit; font-size: 16px; padding: 11px 12px; border: 1.5px solid var(--line); border-radius: 9px; background: #fff; color: var(--ink); width: 100%; }
+input:focus, select:focus, textarea:focus { border-color: var(--navy); outline: 2px solid var(--gold); outline-offset: 0; }
+textarea { min-height: 84px; resize: vertical; }
+fieldset { border: 0; padding: 0; margin: 0; }
+.choices { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 6px; }
+.choices label { font-weight: 400; display: flex; align-items: center; gap: 6px; font-size: 16px; }
+.consent.field { flex-direction: row; }
+.consent { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; color: var(--soft); }
+.consent input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--navy); }
+form .btn { justify-self: start; }
+.after { grid-column: 1 / -1; font-size: 15px; color: var(--soft); margin: 0; }
+
+footer { background: var(--navy); color: #D6DCE8; padding: 36px 0; font-size: 15px; }
+footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer a { color: #fff; }
+
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; padding-top: 36px; padding-bottom: 64px; }
+  .about { grid-template-columns: 1fr; }
+  form { grid-template-columns: 1fr; padding: 20px; }
+  .bar nav { display: none; }
+  section { padding: 56px 0; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#">Hansel · Piano</a>
+    <nav aria-label="Sections">
+      <a href="#who">Who it's for</a>
+      <a href="#trial">Free trial</a>
+      <a href="#prices">Prices</a>
+      <a href="#book">Book</a>
+    </nav>
+  </div>
+  <div class="wrap hero">
+    <div>
+      <p class="eyebrow">Piano lessons in Richmond, BC</p>
+      <h1>Learn piano in English, Cantonese or Mandarin.</h1>
+      <p class="lead">Patient, fun lessons for kids 6 and up and adults, with a practice plan that makes every week count.</p>
+      <ul class="langs" aria-label="Lesson languages"><li>English</li><li lang="zh-HK">廣東話</li><li lang="zh-CN">普通话</li></ul>
+      <a class="btn" href="#book">Book a free 30-minute trial</a>
+      <p class="note">No commitment, no pressure. Parents are welcome to sit in.</p>
+    </div>
+    <div class="price-tag" id="prices">
+      <h2>Lessons and prices</h2>
+      <p class="free">The first 30-minute trial is free.</p>
+      <table>
+        <tr><td>30-minute lesson</td><td>$40</td></tr>
+        <tr><td>45-minute lesson</td><td>$50</td></tr>
+        <tr><td>60-minute lesson</td><td>$60</td></tr>
+      </table>
+      <p class="where">In person in Richmond, or online by video call.</p>
+    </div>
+  </div>
+  <div class="keys" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <i style="left: calc(100% / 21 * 0.7)"></i><i style="left: calc(100% / 21 * 1.7)"></i>
+    <i style="left: calc(100% / 21 * 3.7)"></i><i style="left: calc(100% / 21 * 4.7)"></i><i style="left: calc(100% / 21 * 5.7)"></i>
+    <i style="left: calc(100% / 21 * 7.7)"></i><i style="left: calc(100% / 21 * 8.7)"></i>
+    <i style="left: calc(100% / 21 * 10.7)"></i><i style="left: calc(100% / 21 * 11.7)"></i><i style="left: calc(100% / 21 * 12.7)"></i>
+    <i style="left: calc(100% / 21 * 14.7)"></i><i style="left: calc(100% / 21 * 15.7)"></i>
+    <i style="left: calc(100% / 21 * 17.7)"></i><i style="left: calc(100% / 21 * 18.7)"></i><i style="left: calc(100% / 21 * 19.7)"></i>
+  </div>
+</header>
+
+<main>
+  <section id="who">
+    <div class="wrap">
+      <h2 class="sec">Who it's for</h2>
+      <ul class="who">
+        <li><b>Kids from 6</b><span>Starting from zero, with short, playful lessons.</span></li>
+        <li><b>Pop music fans</b><span>Learn the songs you actually listen to.</span></li>
+        <li><b>Exam students</b><span>Steady preparation for RCM or ABRSM exams.</span></li>
+        <li><b>Adults</b><span>Always wanted to learn, or coming back to it.</span></li>
+        <li><b>Chinese-speaking families</b><span>Lessons and parent updates in Cantonese or Mandarin.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="trial" class="alt">
+    <div class="wrap">
+      <h2 class="sec">What happens in the free trial</h2>
+      <ol class="steps">
+        <li><b>We talk about goals</b><span>Fun, exams, or a favourite song. A few minutes to get to know each other.</span></li>
+        <li><b>I hear where you are</b><span>Total beginners are welcome. There's nothing to prepare.</span></li>
+        <li><b>You leave playing something</b><span>One piece or exercise you can already play, plus a simple plan for the first month.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap about">
+      <div>
+        <h2 class="sec">About me</h2>
+        <p>I'm Hansel. I've taught more than 30 students, mostly beginners and young kids. I teach in English, Cantonese and Mandarin, so parents can always talk to me in the language they're most comfortable with.</p>
+        <p>My lessons are patient and practical. Every student gets a short, realistic practice plan, so the week between lessons actually counts.</p>
+      </div>
+      <p class="pull">Every student leaves the first lesson able to play something new.</p>
+    </div>
+  </section>
+
+  <section id="book" class="alt">
+    <div class="wrap">
+      <h2 class="sec">Book your free trial</h2>
+      <!-- Sign-ups are emailed to the teacher by FormSubmit. First sign-up triggers a one-time activation email. -->
+      <form action="https://formsubmit.co/tanghansel@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New free trial request (piano lessons)">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field">
+          <label for="student">Student's name</label>
+          <input type="text" id="student" name="Student" required autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="age">Student's age <span class="opt">(or "adult")</span></label>
+          <input type="text" id="age" name="Age" required>
+        </div>
+        <div class="field">
+          <label for="parent">Parent's name <span class="opt">(if under 18)</span></label>
+          <input type="text" id="parent" name="Parent" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="phone">Phone or WeChat <span class="opt">(optional)</span></label>
+          <input type="text" id="phone" name="Phone or WeChat" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="exp">Experience</label>
+          <select id="exp" name="Experience">
+            <option>Never played</option><option>A little</option><option>A few years</option><option>Exam level</option>
+          </select>
+        </div>
+        <fieldset class="field full">
+          <legend>Lesson language</legend>
+          <div class="choices">
+            <label><input type="radio" name="Language" value="English" checked> English</label>
+            <label lang="zh-HK"><input type="radio" name="Language" value="Cantonese"> 廣東話</label>
+            <label lang="zh-CN"><input type="radio" name="Language" value="Mandarin"> 普通话</label>
+          </div>
+        </fieldset>
+        <fieldset class="field full">
+          <legend>Where</legend>
+          <div class="choices">
+            <label><input type="radio" name="Format" value="In person" checked> In person in Richmond</label>
+            <label><input type="radio" name="Format" value="Online"> Online</label>
+          </div>
+        </fieldset>
+        <div class="field full">
+          <label for="times">Best days and times for lessons</label>
+          <textarea id="times" name="Best times" placeholder="e.g. weekday afternoons after 4, or Saturday mornings"></textarea>
+        </div>
+        <label class="consent field full"><input type="checkbox" name="Email updates" value="Yes"> Yes, send me occasional emails about lessons, practice tips and openings. You can unsubscribe anytime.</label>
+        <button class="btn" type="submit">Book my free trial</button>
+        <p class="after">I'll email you within a day to set up a time for your free lesson.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Hansel · Piano lessons in Richmond, BC</span>
+    <span>Questions? <a href="#book">Send a message through the form</a></span>
+  </div>
+</footer>
+</body>
+</html>
